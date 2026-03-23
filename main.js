@@ -1,11 +1,11 @@
 const heroMessages = [
-  "90%من الطلاب لا يعرفون مهاراتهم الحقيقيه",
-  "ابدأ رحلتك بذكاء",
-  "SkillBridge يفهمك قبل ما يرشحك"
+  "90% من الطلاب لا يعرفون مسارهم الحقيقي من البداية",
+  "ابدأ من 3 أسئلة فقط بدل ما تتوه في تفاصيل كثيرة",
+  "SkillBridge يفهمك ثم يوجّهك للخطوة التالية مباشرة"
 ];
 
 const quizMicroFeedback = {
-  data: ["اختيار منطقي 👌", "واضح إنك بتحب التنظيم", "أنت تميل للوضوح والقياس"],
+  data: ["اختيار منطقي", "واضح إنك تميل للتحليل", "أنت أقرب للوضوح والقياس"],
   design: ["واضح إن عندك حس بصري", "أنت تميل للتجربة والشكل", "اختيارك فيه لمسة إبداع"],
   business: ["واضح إنك تتحرك مع الناس", "عندك ميل للتأثير", "أنت أقرب للأدوار القيادية"]
 };
@@ -13,7 +13,7 @@ const quizMicroFeedback = {
 const loadingMessages = [
   "Analyzing your skills...",
   "Building your Talent DNA...",
-  "Matching you with opportunities..."
+  "Preparing your first result..."
 ];
 
 const QUICK_ASSESSMENT_KEY = "skillbridgeAssessmentResult";
@@ -22,9 +22,9 @@ const quizQuestions = [
   {
     question: "تفضل العمل مع:",
     options: [
-      { label: "أرقام", track: "data" },
-      { label: "تصميم", track: "design" },
-      { label: "أشخاص", track: "business" }
+      { label: "أرقام وتحليل", track: "data" },
+      { label: "تصميم وتجربة", track: "design" },
+      { label: "ناس وتنظيم", track: "business" }
     ]
   },
   {
@@ -50,15 +50,14 @@ const quizResults = {
     title: "أنت مناسب لمجال Data بنسبة 82%",
     fullTitle: "أنت مناسب لـ Data Analysis بنسبة 82%",
     description: "طريقتك تميل للتحليل، قراءة الأنماط، وتحويل المعلومات إلى قرارات واضحة.",
-    personalized: "من طريقة تفكيرك واضح إنك بتميل لتحليل الأنماط أكتر من التعامل المستمر مع الناس، وده بيخليك أقرب جدًا لمجالات زي Data Analysis. أنت غالبًا ترتاح لما الأمور تبقى قابلة للقياس، ولما تشوف مشكلة وتحولها لخطوات واضحة.",
-    skills: ["Python", "SQL", "تحليل البيانات"],
+    personalized: "من إجاباتك واضح إنك تميل إلى التفكير التحليلي والعمل المنظم. هذا يجعلك قريبًا من مسارات مثل Data Analysis وBusiness Intelligence.",
     strengths: ["تفكير تحليلي", "ملاحظة التفاصيل", "راحة مع الأرقام"],
-    paths: ["Data Analysis", "Business Intelligence", "AI Foundations"],
-    nextStep: "ابدأ بتعلم Python ثم نفّذ مشروع Dashboard صغير على بيانات حقيقية.",
+    paths: ["Data Analysis", "Business Intelligence", "Reporting"],
+    nextStep: "ابدأ بتعلم Python أو SQL ثم افتح الـ Dashboard لتكمل الرحلة بخطة أوضح.",
     retentionHooks: [
-      "في 3 فرص مناسبة ليك متاحة دلوقتي",
-      "في Dashboard فيها تحليل أعمق ليك",
-      "أنت شبه 72% من Data Analysts"
+      "نتيجتك تقرّبك من وظائف تحليل البيانات",
+      "يمكنك الآن فتح Dashboard بخطوة واحدة",
+      "التحليل الكامل سيعطيك قراءة أعمق"
     ],
     dnaBars: [
       { label: "Analysis", value: 82 },
@@ -69,16 +68,15 @@ const quizResults = {
   design: {
     title: "أنت مناسب لمجال Design بنسبة 79%",
     fullTitle: "أنت مناسب لـ Product Design بنسبة 79%",
-    description: "إجاباتك تشير إلى حس بصري قوي وقدرة على تحويل الأفكار إلى تجارب مفهومة وجذابة.",
-    personalized: "واضح إنك بتميل لصناعة تجربة يشعر بها الناس، مش مجرد تنفيذ شكل حلو. أنت غالبًا تلاحظ الانطباع العام بسرعة، وتفكر في كيف تجعل الشيء أوضح وأسهل وأكثر جاذبية.",
-    skills: ["UI Design", "UX Thinking", "Visual Storytelling"],
+    description: "إجاباتك تشير إلى حس بصري قوي وقدرة على تبسيط التجربة.",
+    personalized: "أنت تميل إلى صنع تجربة مفهومة وجذابة، وهذا يجعلك قريبًا من Product Design وUI/UX.",
     strengths: ["حس بصري", "تفكير إبداعي", "تبسيط التجربة"],
     paths: ["Product Design", "UI/UX", "Brand Experience"],
-    nextStep: "ابدأ بتحليل تطبيقات تحبها ثم صمّم Case Study بسيطة لواجهة واحدة.",
+    nextStep: "ابدأ بتحليل منتجات تحبها ثم انتقل للـ Dashboard أو أكمل التحليل الكامل.",
     retentionHooks: [
-      "في Dashboard فيها تحليل أعمق لأسلوبك الإبداعي",
-      "في 3 مسارات Design مناسبة ليك",
-      "في مقارنة بينك وبين مصممين شبهك"
+      "نتيجتك تقرّبك من مسارات التصميم الرقمي",
+      "يمكنك الآن مشاهدة المسار الأنسب لك بوضوح",
+      "التحليل الكامل سيعطيك تفاصيل أكثر عن أسلوبك"
     ],
     dnaBars: [
       { label: "Creativity", value: 79 },
@@ -89,16 +87,15 @@ const quizResults = {
   business: {
     title: "أنت مناسب لمجال Business بنسبة 76%",
     fullTitle: "أنت مناسب لـ Business & Operations بنسبة 76%",
-    description: "لديك ميل للتواصل، القيادة، وتحريك الفرق نحو أهداف واضحة.",
-    personalized: "إجاباتك توضح إنك تميل للحركة، التأثير، وربط الناس بهدف واضح. أنت غالبًا تشعر بقيمتك أكثر عندما يكون لديك دور في اتخاذ القرار أو تنظيم الفوضى وتحويلها إلى اتجاه مفهوم.",
-    skills: ["Communication", "Leadership", "Strategic Thinking"],
+    description: "لديك ميل للتواصل والقيادة وتحريك الفرق نحو أهداف واضحة.",
+    personalized: "إجاباتك توضح أنك تميل إلى التنظيم والتأثير والعمل مع الناس، وهذا يقربك من Business وOperations.",
     strengths: ["القيادة", "التواصل", "تنظيم الأولويات"],
-    paths: ["Operations", "Business Development", "Product Management"],
-    nextStep: "ابدأ بتعلم أساسيات إدارة المنتجات أو العمليات وطبّقها في مشروع فريق صغير.",
+    paths: ["Operations", "Business Development", "Product Coordination"],
+    nextStep: "ابدأ بفهم أساسيات العمليات أو إدارة المنتج ثم كمل رحلتك من الـ Dashboard.",
     retentionHooks: [
-      "في Dashboard فيها تحليل أعمق لأسلوب قيادتك",
-      "في فرص مناسبة ليك حسب طريقة شغلك مع الناس",
-      "في مقارنة بينك وبين أصحاب المسارات التشغيلية"
+      "نتيجتك تقرّبك من أدوار التنظيم والتشغيل",
+      "يمكنك الآن الانتقال مباشرة للخطوة التالية",
+      "التحليل الكامل سيوضح نقاط قوتك بشكل أعمق"
     ],
     dnaBars: [
       { label: "Leadership", value: 76 },
@@ -113,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHeader();
   setupReveal();
   setupHeroTicker();
-  setupJourneyDock();
   setupQuiz();
 });
 
@@ -174,17 +170,19 @@ function setupReveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.14 }
-  );
+  if (typeof IntersectionObserver === "undefined") {
+    items.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
 
   items.forEach((item) => observer.observe(item));
 }
@@ -197,37 +195,7 @@ function setupHeroTicker() {
   window.setInterval(() => {
     index = (index + 1) % heroMessages.length;
     target.textContent = heroMessages[index];
-  }, 2200);
-}
-
-function setupJourneyDock() {
-  const checkpoints = [
-    { selector: "#quiz", percent: 30, label: "أنت في بداية الرحلة" },
-    { selector: ".dashboard-preview", percent: 60, label: "تم فتح الـ Dashboard" },
-    { selector: "#learning", percent: 80, label: "أنت قريب من فتح الفرص الكاملة" }
-  ];
-
-  checkpoints.forEach((checkpoint) => {
-    const element = document.querySelector(checkpoint.selector);
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const percentEl = document.getElementById("journeyPercent");
-          const labelEl = document.getElementById("journeyLabel");
-          const barEl = document.getElementById("journeyBar");
-          if (percentEl) percentEl.textContent = `${checkpoint.percent}%`;
-          if (labelEl) labelEl.textContent = checkpoint.label;
-          if (barEl) barEl.style.width = `${checkpoint.percent}%`;
-        });
-      },
-      { threshold: 0.35 }
-    );
-
-    observer.observe(element);
-  });
+  }, 2400);
 }
 
 function setupQuiz() {
@@ -248,20 +216,11 @@ function setupQuiz() {
   const resultHooks = document.getElementById("resultHooks");
   const dnaBars = document.getElementById("dnaBars");
   const quizFeedback = document.getElementById("quizFeedback");
-  const journeyPercent = document.getElementById("journeyPercent");
-  const journeyLabel = document.getElementById("journeyLabel");
-  const journeyBar = document.getElementById("journeyBar");
 
   if (!questionEl || !optionsEl || !progressEl || !stageEl || !resultEl) return;
 
   let currentIndex = 0;
   const scores = { data: 0, design: 0, business: 0 };
-
-  function setJourneyProgress(percent, label) {
-    if (journeyPercent) journeyPercent.textContent = `${percent}%`;
-    if (journeyLabel) journeyLabel.textContent = label;
-    if (journeyBar) journeyBar.style.width = `${percent}%`;
-  }
 
   function renderQuestion() {
     const currentQuestion = quizQuestions[currentIndex];
@@ -271,23 +230,22 @@ function setupQuiz() {
     questionEl.textContent = currentQuestion.question;
     progressEl.style.width = `${progressValue}%`;
     resultEl.classList.add("hidden");
-    if (quizFeedback) quizFeedback.textContent = "كل اختيار هنا يقربنا لصورتك الحقيقية.";
-    setJourneyProgress(30, "أنت في بداية الرحلة");
 
-    optionsEl.innerHTML = currentQuestion.options
-      .map(
-        (option, index) => `
-          <button class="quiz-option" type="button" data-option-index="${index}">
-            ${option.label}
-          </button>
-        `
-      )
-      .join("");
+    if (quizFeedback) {
+      quizFeedback.textContent = "كل اختيار هنا يقربنا لصورتك الحقيقية.";
+    }
+
+    optionsEl.innerHTML = currentQuestion.options.map((option, index) => `
+      <button class="quiz-option" type="button" data-option-index="${index}">
+        ${option.label}
+      </button>
+    `).join("");
   }
 
   function renderResult() {
     const bestTrack = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
     const result = quizResults[bestTrack];
+
     persistQuickAssessment(bestTrack, result);
 
     stageEl.textContent = "النتيجة جاهزة";
@@ -297,23 +255,9 @@ function setupQuiz() {
     resultEl.classList.remove("hidden");
     resultEl.innerHTML = `
       <p>${result.description}</p>
-      <div class="result-boxes">
-        <div class="result-box">
-          <strong>Skills الأساسية</strong>
-          <ul class="result-list">
-            ${result.skills.map((skill) => `<li>${skill}</li>`).join("")}
-          </ul>
-        </div>
-        <div class="result-box">
-          <strong>مجالات مناسبة</strong>
-          <ul class="result-list">
-            ${result.paths.map((path) => `<li>${path}</li>`).join("")}
-          </ul>
-        </div>
-      </div>
       <div class="result-actions">
         <a class="btn btn-primary" href="student-auth.html">ابدأ رحلتك الآن</a>
-        <a class="btn btn-ghost" href="student-auth.html">جرب التحليل الكامل</a>
+        <a class="btn btn-ghost" href="student-dashboard.html">شاهد الـ Dashboard</a>
       </div>
     `;
 
@@ -321,17 +265,7 @@ function setupQuiz() {
   }
 
   function showResultOverlay(result) {
-    if (
-      !resultOverlay ||
-      !resultTitle ||
-      !resultAiCopy ||
-      !resultStrengths ||
-      !resultPaths ||
-      !resultNextStep ||
-      !resultProgressText ||
-      !resultHooks ||
-      !dnaBars
-    ) {
+    if (!resultOverlay || !resultTitle || !resultAiCopy || !resultStrengths || !resultPaths || !resultNextStep || !resultProgressText || !resultHooks || !dnaBars) {
       return;
     }
 
@@ -340,25 +274,21 @@ function setupQuiz() {
     resultStrengths.innerHTML = result.strengths.map((item) => `<li>${item}</li>`).join("");
     resultPaths.innerHTML = result.paths.map((item) => `<li>${item}</li>`).join("");
     resultNextStep.textContent = result.nextStep;
-    resultProgressText.textContent = "أنت خلصت 30% من رحلتك";
+    resultProgressText.textContent = "أنت خلصت أول خطوة من الرحلة";
     resultHooks.innerHTML = result.retentionHooks.map((item) => `<li>${item}</li>`).join("");
-    dnaBars.innerHTML = result.dnaBars
-      .map(
-        (item) => `
-          <div class="dna-bar">
-            <div class="dna-bar-head">
-              <span>${item.label}</span>
-              <span>${item.value}%</span>
-            </div>
-            <div class="dna-bar-track"><span style="width:${item.value}%"></span></div>
-          </div>
-        `
-      )
-      .join("");
+    dnaBars.innerHTML = result.dnaBars.map((item) => `
+      <div class="dna-bar">
+        <div class="dna-bar-head">
+          <span>${item.label}</span>
+          <span>${item.value}%</span>
+        </div>
+        <div class="dna-bar-track"><span style="width:${item.value}%"></span></div>
+      </div>
+    `).join("");
+
     resultOverlay.classList.remove("hidden");
     resultOverlay.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
-    setJourneyProgress(30, "تم فتح نتيجة Talent DNA");
   }
 
   function closeResultOverlay() {
@@ -381,10 +311,12 @@ function setupQuiz() {
     const optionIndex = Number(button.dataset.optionIndex);
     const selectedOption = quizQuestions[currentIndex].options[optionIndex];
     scores[selectedOption.track] += 1;
+
     if (quizFeedback) {
       const feedbackSet = quizMicroFeedback[selectedOption.track];
       quizFeedback.textContent = feedbackSet[Math.min(currentIndex, feedbackSet.length - 1)];
     }
+
     currentIndex += 1;
 
     if (currentIndex >= quizQuestions.length) {

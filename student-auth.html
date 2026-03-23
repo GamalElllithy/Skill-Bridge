@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Bridge | Student Login & Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="student-auth.css">
+</head>
+<body>
+  <header class="auth-topbar" id="studentAuthTopbar">
+    <div class="topbar-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SB</span>
+        <span class="brand-copy">
+          <strong>Skill Bridge</strong>
+          <small>Student Access</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="فتح القائمة">☰</button>
+
+      <nav class="topbar-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="student-auth.html">Students</a>
+        <a href="company-auth.html">Companies</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a class="ghost-link" href="company-auth.html">Company Access</a>
+        <a class="primary-link" href="student-dashboard.html">Demo Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-shell">
+      <aside class="auth-visual reveal">
+        <div class="visual-badge">Students</div>
+        <h1>ابدأ رحلتك المهنية الآن</h1>
+        <p>ليس مجرد تسجيل دخول. هذه أول خطوة نحو Talent Profile ذكي، Learning Path واضحة، وفرص تناسبك فعلًا.</p>
+
+        <div class="benefit-list">
+          <article>
+            <strong>Talent Analysis</strong>
+            <span>افهم نقاط قوتك بدل التخمين</span>
+          </article>
+          <article>
+            <strong>Learning Path</strong>
+            <span>خطة تعلم مرتبطة بمستقبلك المهني</span>
+          </article>
+          <article>
+            <strong>Smart Jobs</strong>
+            <span>فرص مبنية على التوافق وليس الكلمات فقط</span>
+          </article>
+        </div>
+
+        <div class="social-proof">
+          <div><strong>+10,000</strong><span>طالب بدأ رحلته</span></div>
+          <div><strong>82%</strong><span>متوسط التوافق الأولي</span></div>
+          <div><strong>3 Steps</strong><span>لإنشاء حسابك الذكي</span></div>
+        </div>
+      </aside>
+
+      <section class="auth-card reveal" data-student-auth>
+        <div class="card-head">
+          <span class="section-pill">LinkedIn meets SkillBridge</span>
+          <h2>دخول أو إنشاء حساب طالب</h2>
+          <p>اختر الطريقة المناسبة، وسنكمل معك خطوة بخطوة.</p>
+        </div>
+
+        <div class="auth-switch">
+          <button class="switch-btn active" type="button" data-auth-view="login">Login</button>
+          <button class="switch-btn" type="button" data-auth-view="signup">Sign Up</button>
+        </div>
+
+        <div class="auth-view active" data-auth-panel="login">
+          <form class="auth-form" novalidate>
+            <div class="field">
+              <label for="studentLoginName">الاسم</label>
+              <input id="studentLoginName" type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="field">
+              <label for="studentLoginEmail">البريد الإلكتروني أو رقم الهاتف</label>
+              <input id="studentLoginEmail" type="text" placeholder="name@email.com">
+            </div>
+
+            <div class="field">
+              <label for="studentLoginPassword">كلمة المرور</label>
+              <div class="password-field">
+                <input id="studentLoginPassword" type="password" placeholder="••••••••">
+                <button class="toggle-pass" type="button" data-toggle-password="#studentLoginPassword">إظهار</button>
+              </div>
+            </div>
+
+            <div class="row-inline">
+              <label class="remember"><input type="checkbox"> تذكرني</label>
+              <a href="#">نسيت كلمة المرور؟</a>
+            </div>
+
+            <p class="passport-note">سيتم إنشاء Talent Passport خاص بك</p>
+
+            <button class="submit-btn" type="button">تسجيل الدخول</button>
+
+            <div class="divider"><span>أو</span></div>
+
+            <div class="social-row">
+              <button class="social-btn" type="button">Continue with Google</button>
+              <button class="social-btn linkedin" type="button">Continue with LinkedIn</button>
+            </div>
+
+            <p class="auth-note">ليس لديك حساب؟ <button class="text-btn" type="button" data-auth-view="signup">أنشئ حسابك الآن</button></p>
+          </form>
+        </div>
+
+        <div class="auth-view" data-auth-panel="signup">
+          <div class="signup-progress">
+            <div class="progress-head">
+              <strong>Progress</strong>
+              <span data-progress-label>Step 1 / 4</span>
+            </div>
+            <div class="progress-track"><span data-progress-bar style="width:25%"></span></div>
+            <p data-progress-copy>خطوة واحدة أقرب لرحلتك المهنية.</p>
+          </div>
+
+          <form class="signup-form" novalidate>
+            <section class="signup-step active" data-step="1">
+              <div class="step-head">
+                <h3>المعلومات الأساسية</h3>
+                <span class="mini-pill">Step 1</span>
+              </div>
+              <div class="grid two">
+                <div class="field">
+                  <label for="studentName">الاسم الكامل</label>
+                  <input id="studentName" type="text" placeholder="Enter your name">
+                </div>
+                <div class="field">
+                  <label for="studentEmail">البريد الإلكتروني</label>
+                  <input id="studentEmail" type="email" placeholder="name@email.com">
+                </div>
+                <div class="field">
+                  <label for="studentPassword">كلمة المرور</label>
+                  <div class="password-field">
+                    <input id="studentPassword" type="password" placeholder="8 أحرف على الأقل">
+                    <button class="toggle-pass" type="button" data-toggle-password="#studentPassword">إظهار</button>
+                  </div>
+                  <small class="validation-text">يفضل كلمة مرور قوية تحتوي على أرقام وحروف.</small>
+                </div>
+                <div class="field">
+                  <label for="studentConfirmPassword">تأكيد كلمة المرور</label>
+                  <div class="password-field">
+                    <input id="studentConfirmPassword" type="password" placeholder="أعد كتابة كلمة المرور">
+                    <button class="toggle-pass" type="button" data-toggle-password="#studentConfirmPassword">إظهار</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="signup-step" data-step="2">
+              <div class="step-head">
+                <h3>المعلومات الأكاديمية والمهنية</h3>
+                <span class="mini-pill">Step 2</span>
+              </div>
+              <div class="grid two">
+                <div class="field">
+                  <label for="studentTrack">التخصص / المسار</label>
+                  <select id="studentTrack">
+                    <option value="">اختر المسار</option>
+                    <option>Data Analysis</option>
+                    <option>Software Engineering</option>
+                    <option>UI/UX Design</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="studentLevel">المستوى التعليمي</label>
+                  <select id="studentLevel">
+                    <option value="">اختر المستوى</option>
+                    <option>High School</option>
+                    <option>Bachelor</option>
+                    <option>Master</option>
+                  </select>
+                </div>
+                <div class="field wide">
+                  <label for="studentSkills">المهارات الرئيسية</label>
+                  <input id="studentSkills" type="text" placeholder="Python, SQL, Power BI">
+                </div>
+                <div class="field wide">
+                  <label for="studentExperience">الخبرة السابقة أو المشاريع</label>
+                  <textarea id="studentExperience" placeholder="اكتب تدريب، مشاريع، أو خبرات مختصرة"></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="signup-step" data-step="3">
+              <div class="step-head">
+                <h3>إعداد البروفايل</h3>
+                <span class="mini-pill">Step 3</span>
+              </div>
+              <div class="grid two">
+                <div class="field">
+                  <label for="studentAvatar">الصورة الشخصية أو Avatar</label>
+                  <input id="studentAvatar" type="text" placeholder="ارفع رابطًا أو اكتب Initials">
+                </div>
+                <div class="field">
+                  <label for="studentStatus">الحالة الحالية</label>
+                  <select id="studentStatus">
+                    <option value="">اختر الحالة</option>
+                    <option>Available</option>
+                    <option>Employed</option>
+                    <option>Internship</option>
+                  </select>
+                </div>
+                <div class="field wide">
+                  <label for="studentAbout">About Me</label>
+                  <textarea id="studentAbout" placeholder="اكتب نبذة قصيرة عن نفسك وأهدافك"></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="signup-step" data-step="4">
+              <div class="step-head">
+                <h3>التفضيلات والفرص</h3>
+                <span class="mini-pill">Step 4</span>
+              </div>
+              <div class="grid two">
+                <div class="field">
+                  <label for="studentOpportunity">نوع الفرص المطلوبة</label>
+                  <select id="studentOpportunity">
+                    <option value="">اختر الفرص</option>
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Internship</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="studentLocation">الموقع المفضل</label>
+                  <select id="studentLocation">
+                    <option value="">اختر الموقع</option>
+                    <option>Remote</option>
+                    <option>Cairo</option>
+                    <option>Alexandria</option>
+                  </select>
+                </div>
+                <div class="field wide">
+                  <label for="studentCaptcha">تأكيد أمني</label>
+                  <input id="studentCaptcha" type="text" placeholder="اكتب: SKILLBRIDGE">
+                  <small class="validation-text">محاكاة Captcha بسيطة لحين الربط الفعلي.</small>
+                </div>
+              </div>
+            </section>
+
+            <div class="wizard-actions">
+              <button class="ghost-btn" type="button" data-prev-step>Previous</button>
+              <div class="wizard-actions-end">
+                <button class="ghost-btn" type="button" data-next-step>Next</button>
+                <a class="submit-btn hidden" href="student-onboarding.html" data-finish-step>أنشئ حسابك وابدأ التحليل</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <section class="smart-auth-overlay hidden" id="smartAuthOverlay" aria-hidden="true">
+    <div class="overlay-core">
+      <div class="overlay-brand">
+        <span class="overlay-logo">SB</span>
+        <strong>SkillBridge</strong>
+      </div>
+      <div class="overlay-particles"></div>
+      <div class="overlay-copy" id="overlayCopy">
+        <span class="section-pill">Talent Passport</span>
+        <h2 id="overlayTitle">Creating your Talent DNA...</h2>
+        <p id="overlaySubtitle">خلينا نحفظ رحلتك ونبني لك مسار خاص</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="toast" id="studentAuthToast"></div>
+
+  <script src="student-auth.js"></script>
+</body>
+</html>

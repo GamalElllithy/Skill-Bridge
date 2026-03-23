@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillBridge منصة ذكية تساعدك تكتشف مجالك الحقيقي، تحلل مهاراتك، وتبدأ رحلة مهنية أوضح وأقوى.">
+  <title>SkillBridge | اكتشف مجالك الحقيقي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+    <div class="loading-panel">
+      <div class="brand-mark brand-mark-lg">
+        <span class="brand-mark-core">SB</span>
+      </div>
+      <p class="loading-label">SkillBridge AI</p>
+      <h1 class="loading-message" id="loadingMessage">Analyzing your skills...</h1>
+      <div class="loading-bar">
+        <span id="loadingBar"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="SkillBridge">
+        <div class="brand-mark">
+          <span class="brand-mark-core">SB</span>
+        </div>
+        <div class="brand-copy">
+          <strong>SkillBridge</strong>
+          <small>Talent DNA Meets Opportunity</small>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home">الرئيسية</a>
+        <a href="#quiz">التحليل السريع</a>
+        <a href="#product">المنصة</a>
+        <a href="#companies">للشركات</a>
+        <a href="#learning">تطوير المهارات</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="./company-auth.html">للشركات</a>
+        <a class="btn btn-primary" href="./student-auth.html">ابدأ الآن</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Platform That Understands You</span>
+          <p class="hero-hook">مشكلتك مش إنك مش شاطر… مشكلتك إنك في المسار الغلط.</p>
+          <h1>اكتشف مجالك الحقيقي… <span>مش مجرد وظيفة</span></h1>
+          <p class="hero-subtext">حلل مهاراتك، اعرف نقاط قوتك، واحصل على فرص تناسبك بدقة.</p>
+
+          <ul class="hero-points">
+            <li>اعرف مستواك الحقيقي</li>
+            <li>شوف فرص مناسبة ليك</li>
+            <li>طور نفسك بخطة واضحة</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="#quiz">ابدأ تحليل مهاراتك الآن</a>
+            <a class="btn btn-ghost btn-large" href="student-dashboard.html">شاهد الـ Dashboard</a>
+          </div>
+
+          <div class="hero-dynamic">
+            <span class="dynamic-dot"></span>
+            <p id="heroDynamicText">90%من الطلاب لا يعرفون مهاراتهم الحقيقيه</p>
+          </div>
+
+          <p class="urgency-line">ابدأ دلوقتي بدل ما تضيع سنة تانية في طريق مش شبهك.</p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-card dna-card">
+            <div class="hero-card-head">
+              <span>Talent DNA</span>
+              <span>82%</span>
+            </div>
+            <h3>أنت مناسب لمجال Data بنسبة 82%</h3>
+            <p>تحليل سريع يربط طريقة تفكيرك بالمهارات والفرص المناسبة لك.</p>
+            <div class="mini-progress"><span style="width:82%"></span></div>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Problem Solving</span>
+            </div>
+          </div>
+
+          <div class="hero-card floating-card">
+            <small>Next Best Step</small>
+            <strong>ابدأ Quiz مدته 60 ثانية</strong>
+            <p>ثم ادخل مباشرة إلى لوحة نتائجك وخطة التطوير المقترحة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip reveal">
+      <div class="container trust-grid">
+        <article>
+          <strong>رحلة واضحة</strong>
+          <p>Hero → Quiz → Result → Dashboard</p>
+        </article>
+        <article>
+          <strong>تجربة ذكية</strong>
+          <p>Dynamic content + matching + learning path</p>
+        </article>
+        <article>
+          <strong>قرار أسرع</strong>
+          <p>Call to action واضح في كل خطوة</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey-strip reveal">
+      <div class="container journey-track">
+        <article class="journey-step is-active">
+          <span>1</span>
+          <strong>أنت هنا الآن</strong>
+          <p>لسه بنفهمك من أول سؤال.</p>
+        </article>
+        <article class="journey-step">
+          <span>2</span>
+          <strong>النتيجة</strong>
+          <p>هتشوف قراءة شخصية سريعة ومش generic.</p>
+        </article>
+        <article class="journey-step">
+          <span>3</span>
+          <strong>الخطوة الجاية</strong>
+          <p>Dashboard + فرص + خطة تعلم.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="container quiz-grid">
+        <div class="section-copy reveal">
+          <span class="eyebrow">Interactive Quiz</span>
+          <h2>اكتشف مجالك في 60 ثانية</h2>
+          <p>جاوب على أسئلة قصيرة، وسنحوّل إجاباتك إلى قراءة أولية عن المجال الأقرب لك، المهارات المطلوبة، والخطوة التالية المناسبة.</p>
+          <p class="journey-copy">دي مجرد البداية… بعد النتيجة هنشوفك بعمق أكتر ونبني خطتك.</p>
+          <div class="inline-stats">
+            <div>
+              <strong>3</strong>
+              <span>أسئلة سريعة</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span>Feedback فوري</span>
+            </div>
+            <div>
+              <strong>1</strong>
+              <span>CTA واضح</span>
+            </div>
+          </div>
+          <div class="progress-story">
+            <strong>أنت هتفتح 30% من رحلتك</strong>
+            <span>فاضل خطوة وتفتح فرص حقيقية وخطة تطوير تناسبك.</span>
+          </div>
+          <div class="badge-row">
+            <span class="game-badge">Badge: Explorer</span>
+            <span class="game-badge">+120 XP</span>
+          </div>
+          <a class="btn btn-secondary" href="student-auth.html">جرب التحليل الكامل</a>
+        </div>
+
+        <div class="quiz-card reveal">
+          <div class="quiz-meta">
+            <span class="quiz-stage" id="quizStage">سؤال 1 من 3</span>
+            <span class="quiz-time">60 ثانية</span>
+          </div>
+          <div class="quiz-progress">
+            <span id="quizProgress"></span>
+          </div>
+          <h3 id="quizQuestion">تفضل العمل مع:</h3>
+          <p class="quiz-feedback" id="quizFeedback">كل اختيار هنا يقربنا لصورتك الحقيقية.</p>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-result hidden" id="quizResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" id="product">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Product Experience</span>
+          <h2>SkillBridge ليست مجرد Landing Page</h2>
+          <p class="corsat">مش هنديّك كورسات وخلاص، ومش هنعرض وظائف لأي حد. SkillBridge تقولك تتعلم إيه وليه، وتوصلك باللي يناسبك أنت.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <span class="card-step">01</span>
+            <h3>Quiz ذكي</h3>
+            <p>أسئلة قصيرة تكشف طريقة التفكير والميول المهنية وتفتح فضول المستخدم من أول دقيقة.</p>
+            <a href="#quiz" class="text-link">جرب التحليل</a>
+          </article>
+          <article class="product-card reveal">
+            <span class="card-step">02</span>
+            <h3>Dashboard واضح</h3>
+            <p>لوحة تعرض نسبة التوافق، المهارات الأساسية، المجالات المقترحة، والخطوات القادمة.</p>
+            <a href="student-dashboard.html" class="text-link">ابدأ الآن</a>
+          </article>
+          <article class="product-card reveal">
+            <span class="card-step">03</span>
+            <h3>Smart Matching</h3>
+            <p>فرص مناسبة لك بناءً على شخصيتك ومستواك وليس فقط كلمات موجودة في CV.</p>
+            <a href="./smart-jobs.html" class="text-link">شاهد الفرص</a>
+          </article>
+          <article class="product-card reveal">
+            <span class="card-step">04</span>
+            <h3>Learning Path</h3>
+            <p>اقتراحات تعلم مرتبطة مباشرة بالمجال الذي يناسبك حتى تشعر أن كل خطوة لها معنى.</p>
+            <a href="#learning" class="text-link">ابدأ رحلتك</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-preview reveal">
+      <div class="container dashboard-grid">
+        <div class="section-copy">
+          <span class="eyebrow">Your Next Screen</span>
+          <h2>بعد النتيجة… تدخل مباشرة إلى لوحة تقرأك</h2>
+          <p>المستخدم لا يتوقف عند نتيجة عامة، بل ينتقل إلى Dashboard يشرح له ماذا يفعل الآن ولماذا هذا المسار مناسب له.</p>
+          <p class="journey-copy">تمام، عرفنا أنت مين… نوصلك بفرص بقى.</p>
+          <div class="retention-list">
+            <div>في 3 فرص مناسبة ليك متاحة دلوقتي</div>
+            <div>في Dashboard فيها تحليل أعمق ليك</div>
+            <div>في مقارنة بينك وبين ناس شبهك</div>
+          </div>
+          <a class="btn btn-primary" href="student-dashboard.html">ابدأ الآن</a>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-head">
+            <div>
+              <small>Talent Snapshot</small>
+              <h3>Data Explorer</h3>
+            </div>
+            <span class="match-badge">82% Match</span>
+          </div>
+          <div class="dashboard-metrics">
+            <article>
+              <strong>Python</strong>
+              <div class="mini-progress"><span style="width:74%"></span></div>
+            </article>
+            <article>
+              <strong>Analytical Thinking</strong>
+              <div class="mini-progress"><span style="width:89%"></span></div>
+            </article>
+            <article>
+              <strong>Communication</strong>
+              <div class="mini-progress"><span style="width:63%"></span></div>
+            </article>
+          </div>
+          <div class="dashboard-note">
+            <strong>Recommendation:</strong>
+            تعلم Python لأن ده هيساعدك تدخل مجال Data.
+          </div>
+          <div class="dashboard-unlock">
+            <span class="game-badge">Unlock: Dashboard</span>
+            <span class="game-badge">Journey: 60%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies-section" id="companies">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">For Companies</span>
+          <h2>إقناع الشركات بالأرقام… لا بالكلام فقط</h2>
+          <p>SkillBridge تجعل قرار التوظيف أسرع وأذكى من خلال تحليل أعمق للمرشحين وتقليل الاعتماد على فرز الـ CV التقليدي.</p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <strong>60%</strong>
+            <p class="new-p">تقليل وقت التوظيف</p>
+          </article>
+          <article class="stat-card reveal">
+            <strong>80%</strong>
+            <p class="new-p">دقة اختيار أعلى</p>
+          </article>
+          <article class="stat-card reveal">
+            <strong>Less CV Noise</strong>
+            <p class="new-p">تقليل الاعتماد على CV filtering التقليدي</p>
+          </article>
+        </div>
+        <div class="company-benefits">
+          <article class="company-benefit reveal">
+            <strong>بدل CV</strong>
+            <p class="new-p">Talent Score واضح يختصر صورة المرشح بسرعة.</p>
+          </article>
+          <article class="company-benefit reveal">
+            <strong>بدل Interview طويل</strong>
+            <p class="new-p">تحليل جاهز للشخصية والمهارات قبل المقابلة.</p>
+          </article>
+          <article class="company-benefit reveal">
+            <strong>مشكلة حقيقية</strong>
+            <p class="new-p">نقلل الوقت الضائع ونرفع دقة الاختيار من البداية.</p>
+          </article>
+        </div>
+
+        <div class="company-cta reveal">
+          <a class="btn btn-secondary btn-large" href="company-dashboard.html">ابدأ الآن</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Real Stories</span>
+          <h2>مش مجرد Concept</h2>
+          <p>أرقام وحالات قبل/بعد تدي ثقة حقيقية أن SkillBridge تحل مشكلة موجودة فعلًا.</p>
+        </div>
+        <div class="proof-numbers reveal">
+          <div><strong>+10,000</strong><span>مستخدم جرّب التحليل</span></div>
+          <div><strong>72%</strong><span>من أصحاب مسار Data لديهم أنماط قريبة من نتيجتك</span></div>
+          <div><strong>3 أسابيع</strong><span>متوسط الوقت للوصول إلى أول فرصة مناسبة</span></div>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card reveal">
+            <strong>أحمد | قبل / بعد</strong>
+            <p>كان تايه بين مجالات كتير → بعد التحليل ركّز على Frontend Developer وبدأ يبني Portfolio أوضح وخطة تعلم فعلية.</p>
+          </article>
+          <article class="proof-card reveal">
+            <strong>سارة | قبل / بعد</strong>
+            <p>كانت مترددة بين Marketing وData → اكتشفت إن ميولها أقرب للتحليل وبدأت Data Analysis بدل ما تضيع وقتها في اتجاه مش مناسب.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning-section" id="learning">
+      <div class="container learning-grid">
+        <div class="section-copy reveal">
+          <span class="eyebrow">Skill Growth</span>
+          <h2>طور مهاراتك بناءً على مستقبلك… لا بشكل عشوائي</h2>
+          <p>كل اقتراح تعلم داخل المنصة مرتبط بهدف مهني فعلي، حتى يشعر المستخدم أن التعلم خطوة تقربه من نتيجة واضحة.</p>
+          <div class="badge-row">
+            <span class="game-badge">Badge: Analyzer</span>
+            <span class="game-badge">Journey: 80%</span>
+          </div>
+          <a class="btn btn-primary" href="./learning-path.html">ابدأ الآن</a>
+        </div>
+
+        <div class="learning-card reveal">
+          <small>Recommended for you</small>
+          <h3>تعلم Python</h3>
+          <p>لأن ده هيساعدك تدخل مجال Data ويقوي فرصة توافقك مع الوظائف التحليلية.</p>
+          <ul class="learning-list">
+            <li>ابدأ بالأساسيات خلال 7 أيام</li>
+            <li>نفّذ مشروع بيانات بسيط</li>
+            <li>حدّث Talent Passport بالإنجاز الجديد</li>
+          </ul>
+          <a class="text-link" href="student-auth.html">جرب التحليل</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section reveal">
+      <div class="container cta-panel">
+        <span class="eyebrow">Ready To Start?</span>
+        <h2>SkillBridge يفهمك قبل ما يرشحك</h2>
+        <p class="Start">ابدأ من التحليل السريع، ثم انتقل إلى لوحة النتائج، ثم طوّر نفسك بخطة واضحة وفرص مناسبة فعلًا.</p>
+        <div class="hero-actions center">
+          <a class="btn btn-primary btn-large" href="#quiz">ابدأ تحليل مهاراتك الآن</a>
+          <a class="btn btn-ghost btn-large" href="student-auth.html">ابدأ الآن</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="result-overlay hidden" id="resultOverlay" aria-hidden="true">
+    <div class="result-backdrop" id="resultBackdrop"></div>
+    <div class="result-fullscreen" id="resultFullscreen">
+      <button class="result-close" id="resultClose" type="button" aria-label="إغلاق">×</button>
+      <div class="result-hero">
+        <span class="eyebrow">Your Talent Reveal</span>
+        <p class="result-kicker">🎯 نتيجتك</p>
+        <h2 id="resultTitle">أنت مناسب لـ Data Analysis بنسبة 82%</h2>
+        <p class="result-ai-copy" id="resultAiCopy"></p>
+      </div>
+
+      <div class="result-summary-grid">
+        <article class="result-panel-card">
+          <strong>✔ نقاط قوتك</strong>
+          <ul id="resultStrengths" class="result-list"></ul>
+        </article>
+        <article class="result-panel-card">
+          <strong>✔ المجالات المناسبة</strong>
+          <ul id="resultPaths" class="result-list"></ul>
+        </article>
+        <article class="result-panel-card">
+          <strong>✔ أول خطوة ليك</strong>
+          <p id="resultNextStep"></p>
+        </article>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-card">
+          <strong>Talent DNA Graph</strong>
+          <div class="dna-bars" id="dnaBars"></div>
+        </article>
+        <article class="insight-card">
+          <strong>Skill Radar</strong>
+          <div class="radar-card">
+            <div class="radar-ring ring-1"></div>
+            <div class="radar-ring ring-2"></div>
+            <div class="radar-ring ring-3"></div>
+            <div class="radar-shape" id="radarShape"></div>
+          </div>
+        </article>
+        <article class="insight-card">
+          <strong>Retention Hook</strong>
+          <ul class="result-list" id="resultHooks"></ul>
+        </article>
+      </div>
+
+      <div class="unlock-strip">
+        <strong id="resultProgressText">أنت خلصت 30% من رحلتك</strong>
+        <span>كمّل الخطوة الجاية عشان تفتح الـ Dashboard والفرص الحقيقية.</span>
+      </div>
+
+      <div class="result-actions">
+        <a class="btn btn-primary btn-large" href="./student-auth.html">ابدأ رحلتك الآن</a>
+          <a class="btn btn-ghost btn-large" href="student-auth.html">جرب التحليل الكامل</a>
+      </div>
+    </div>
+  </section>
+
+
+<footer id="contact" class="footer-section">
+  <div class="container">
+
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h3>SkillBridge</h3>
+        <p>
+          منصة ذكية تربط المهارات بالفرص، وتساعدك تبني مستقبلك المهني بثقة.
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>تواصل معنا</h4>
+
+        <ul>
+          <li>
+            <i class="fas fa-phone"></i>
+            <span>01069770082</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>gellithy36@gmail.com</span>
+          </li>
+          <li>
+            <i class="fas fa-location-dot"></i>
+            <span>القاهرة، مصر</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="footer-form">
+        <h4>راسلنا</h4>
+        <form>
+          <input type="text" placeholder="اسمك" required>
+          <input type="email" placeholder="بريدك الإلكتروني" required>
+          <textarea placeholder="رسالتك" required></textarea>
+          <button type="submit">
+            إرسال الرسالة
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      © 2026 SkillBridge — جميع الحقوق محفوظة
+    </div>
+
+  </div>
+</footer>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Bridge | Student Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body>
+  <header class="student-topbar" id="studentTopbar">
+    <div class="topbar-shell">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">SB</span>
+        <span class="brand-copy">
+          <strong>Skill Bridge</strong>
+          <small>Student Command Center</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="فتح القائمة">☰</button>
+
+      <nav class="topbar-links">
+        <a class="active" href="student-dashboard.html">Dashboard</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#grades">Grades</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <div class="xp-pill">
+          <strong>Level 2</strong>
+          <span>Explorer • 620 XP</span>
+        </div>
+
+        <button class="icon-btn has-badge" id="studentNotificationsTrigger" type="button" data-dropdown-trigger="notificationsDropdown" data-badge="0" aria-label="الإشعارات">🔔</button>
+        <div class="dropdown-panel" id="notificationsDropdown">
+          <strong>Latest Notifications</strong>
+          <div class="dropdown-notifications" id="studentNotificationsList"></div>
+        </div>
+
+        <button class="icon-btn" type="button" data-dropdown-trigger="settingsDropdown" aria-label="الإعدادات">⚙</button>
+        <div class="dropdown-panel" id="settingsDropdown">
+          <strong>Settings</strong>
+          <a href="#">Profile Settings</a>
+          <a href="#">Theme Toggle</a>
+          <a href="#">Privacy</a>
+          <a href="#">Help & Support</a>
+        </div>
+
+        <button class="profile-btn" type="button" data-dropdown-trigger="profileDropdown">
+          <span class="avatar-sm">GA</span>
+          <span>جمال</span>
+        </button>
+        <div class="dropdown-panel" id="profileDropdown">
+          <strong>My Profile</strong>
+          <a href="./Student Dashboard – Profile.html">View Profile</a>
+          <a href="#projects">My Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="student-auth.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="dashboard-shell">
+      <aside class="sidebar reveal">
+        <div class="sidebar-user">
+          <div class="avatar">GA</div>
+          <div>
+            <h2>Gamal Ellithy</h2>
+            <p>Data Analysis Track</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="active" href="student-dashboard.html">🧠 Dashboard</a>
+          <a href="./Student Dashboard – Profile.html">👤 My Profile</a>
+          <a href="smart-jobs.html">💼 Jobs</a>
+          <a href="learning-path.html">📚 Learning</a>
+          <a href="#achievements">🏆 Achievements</a>
+          <a href="#updates">🔔 Updates</a>
+        </nav>
+      </aside>
+
+      <section class="main-content">
+        <section class="welcome-card reveal">
+          <div class="welcome-copy">
+            <span class="section-tag">Welcome Back</span>
+            <h1>Welcome, Gamal!</h1>
+            <p>ابدأ رحلتك التعليمية من هنا. كل خطوة صغيرة هنا تقربك من فرص حقيقية ومستوى أقوى.</p>
+          </div>
+
+          <div class="welcome-meta">
+            <div class="level-badge">Level 2 Explorer</div>
+            <div class="xp-progress">
+              <div class="xp-head">
+                <strong>XP Progress</strong>
+                <span>620 / 1000</span>
+              </div>
+              <div class="progress-track"><span style="width:62%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-card reveal">
+          <div class="hero-head">
+            <div>
+              <span class="section-tag">Talent Snapshot</span>
+              <h2>أنت Data بنسبة 82%</h2>
+            </div>
+            <a class="primary-btn" href="learning-path.html">كمل رحلتك</a>
+          </div>
+
+          <p>من طريقة تفكيرك واضح إنك أقرب للتحليل، قراءة الأنماط، وتحويل البيانات إلى قرارات. المسار مناسب لك فعلًا، والخطوة التالية الآن هي رفع مستواك بأدوات عملية.</p>
+
+          <div class="hero-progress">
+            <div class="progress-head">
+              <strong>Journey Progress</strong>
+              <span>60%</span>
+            </div>
+            <div class="progress-track large"><span style="width:60%"></span></div>
+          </div>
+        </section>
+
+        <section class="stats-grid reveal">
+          <article class="stat-card">
+            <small>Active Courses</small>
+            <strong>4</strong>
+            <p>كورسات مفعلة حاليًا على مسارك</p>
+          </article>
+          <article class="stat-card">
+            <small>Projects Submitted</small>
+            <strong>3</strong>
+            <p>مشاريع مرفوعة وجاهزة للمراجعة</p>
+          </article>
+          <article class="stat-card">
+            <small>Certificates Earned</small>
+            <strong>2</strong>
+            <p>شهادات موثقة لرحلتك التعليمية</p>
+          </article>
+          <article class="stat-card">
+            <small>Total Score</small>
+            <strong>87%</strong>
+            <p>أداء عام قوي ومتصاعد</p>
+          </article>
+        </section>
+
+        <section class="dual-grid">
+          <article class="dna-card reveal">
+            <div class="card-head">
+              <div>
+                <h3>Talent DNA</h3>
+                <p>شكل بصري سريع لشخصيتك وميلك المهني</p>
+              </div>
+              <span class="mini-badge">Core Graphs</span>
+            </div>
+
+            <div class="metric-bars">
+              <div class="metric-row">
+                <div class="metric-head"><strong>Analysis</strong><span>82%</span></div>
+                <div class="progress-track"><span style="width:82%"></span></div>
+              </div>
+              <div class="metric-row">
+                <div class="metric-head"><strong>Creativity</strong><span>58%</span></div>
+                <div class="progress-track"><span style="width:58%"></span></div>
+              </div>
+              <div class="metric-row">
+                <div class="metric-head"><strong>Leadership</strong><span>46%</span></div>
+                <div class="progress-track"><span style="width:46%"></span></div>
+              </div>
+            </div>
+
+            <div class="radar-chart">
+              <div class="radar-ring ring-lg"></div>
+              <div class="radar-ring ring-md"></div>
+              <div class="radar-ring ring-sm"></div>
+              <div class="radar-shape"></div>
+            </div>
+          </article>
+
+          <article class="next-step-card reveal">
+            <div class="card-head">
+              <div>
+                <h3>Next Best Step</h3>
+                <p>أفضل خطوة حالية ترفع مستواك</p>
+              </div>
+              <span class="mini-badge">Action Now</span>
+            </div>
+
+            <div class="next-step-box">
+              <strong>ابدأ Python</strong>
+              <p>لأن ده هيساعدك تدخل أعمق في مجال Data ويزود فرصك بشكل مباشر.</p>
+              <a class="primary-btn" href="learning-path.html">Start Now</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="analytics-grid reveal" id="studentAnalytics">
+          <article class="analytics-card">
+            <div class="card-head">
+              <div>
+                <h3>Growth Timeline</h3>
+                <p>تطورك عبر التعلم والمشاريع والتقديمات</p>
+              </div>
+              <span class="mini-badge">Live</span>
+            </div>
+            <div class="timeline-chart" id="studentGrowthChart"></div>
+          </article>
+
+          <article class="analytics-card">
+            <div class="card-head">
+              <div>
+                <h3>Skills Gap</h3>
+                <p>المهارات التي سترفع فرص قبولك بشكل مباشر</p>
+              </div>
+              <span class="mini-badge">Improve Match</span>
+            </div>
+            <div class="gap-chart" id="studentGapChart"></div>
+          </article>
+
+          <article class="analytics-card analytics-card-ring">
+            <div class="card-head">
+              <div>
+                <h3>XP & Badges</h3>
+                <p>مستوى الإنجاز الحالي داخل الرحلة</p>
+              </div>
+              <span class="mini-badge">Gamified</span>
+            </div>
+            <div class="analytics-ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="analytics-ring-bg" cx="60" cy="60" r="46"></circle>
+                <circle class="analytics-ring-value" id="studentXpRing" cx="60" cy="60" r="46"></circle>
+              </svg>
+              <div class="analytics-ring-copy">
+                <strong id="studentXpPercent">62%</strong>
+                <span>XP Progress</span>
+              </div>
+            </div>
+            <div class="badge-summary" id="studentBadgeSummary"></div>
+          </article>
+        </section>
+
+        <section class="panel-card reveal" id="projects">
+          <div class="card-head">
+            <div>
+              <h3>My Projects</h3>
+              <p>ارفع مشاريعك وشارك تقدمك</p>
+            </div>
+            <a class="primary-btn" href="#">Upload Project</a>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-thumb">DB</div>
+              <strong>Data Board</strong>
+              <span class="status-badge submitted">Submitted</span>
+            </article>
+            <article class="project-card">
+              <div class="project-thumb">SQL</div>
+              <strong>SQL Insights</strong>
+              <span class="status-badge reviewed">Reviewed</span>
+            </article>
+            <article class="project-card">
+              <div class="project-thumb">PY</div>
+              <strong>Python Cleaner</strong>
+              <span class="status-badge approved">Approved</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="dual-grid">
+          <article class="panel-card reveal" id="certificates">
+            <div class="card-head">
+              <div>
+                <h3>My Certificates</h3>
+                <p>شهاداتك الرسمية واعترافك بالمهارات</p>
+              </div>
+              <span class="mini-badge">2 Certificates</span>
+            </div>
+
+            <div class="cert-grid">
+              <div class="cert-card">
+                <strong>Python Foundations</strong>
+                <small>12 March 2026</small>
+                <a href="#">Download</a>
+              </div>
+              <div class="cert-card">
+                <strong>Data Analysis Basics</strong>
+                <small>03 February 2026</small>
+                <a href="#">Download</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel-card reveal" id="grades">
+            <div class="card-head">
+              <div>
+                <h3>My Grades</h3>
+                <p>متابعة تقدمك الأكاديمي</p>
+              </div>
+              <span class="mini-badge">Current Term</span>
+            </div>
+
+            <div class="grades-list">
+              <div class="grade-row">
+                <div>
+                  <strong>Python Fundamentals</strong>
+                  <small>Score 91%</small>
+                </div>
+                <div class="progress-track"><span style="width:91%"></span></div>
+              </div>
+              <div class="grade-row">
+                <div>
+                  <strong>SQL Basics</strong>
+                  <small>Score 84%</small>
+                </div>
+                <div class="progress-track"><span style="width:84%"></span></div>
+              </div>
+              <div class="grade-row">
+                <div>
+                  <strong>Statistics</strong>
+                  <small>Score 78%</small>
+                </div>
+                <div class="progress-track"><span style="width:78%"></span></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <aside class="quick-panel">
+        <article class="panel-card reveal" id="achievements">
+          <div class="card-head">
+            <div>
+              <h3>Achievements</h3>
+              <p>إنجازاتك الحالية داخل الرحلة</p>
+            </div>
+            <span class="mini-badge">Gamified</span>
+          </div>
+
+          <div class="achievement-list">
+            <div class="achievement-item unlocked"><strong>Explorer</strong><span>خلص Quiz</span></div>
+            <div class="achievement-item unlocked"><strong>Analyzer</strong><span>دخل Dashboard</span></div>
+            <div class="achievement-item"><strong>Builder</strong><span>ارفع مشروع</span></div>
+            <div class="achievement-item"><strong>Ready</strong><span>قدّم على شغل</span></div>
+          </div>
+        </article>
+
+        <article class="panel-card reveal">
+          <div class="card-head">
+            <div>
+              <h3>Journey</h3>
+              <p>تقدّمك الحالي في اللعبة</p>
+            </div>
+            <span class="mini-badge">30 → 100</span>
+          </div>
+
+          <div class="journey-pills">
+            <span class="journey-pill done">30% Quiz</span>
+            <span class="journey-pill active">60% Dashboard</span>
+            <span class="journey-pill">80% Learning</span>
+            <span class="journey-pill">100% Ready</span>
+          </div>
+        </article>
+
+        <article class="panel-card reveal" id="updates">
+          <div class="card-head">
+            <div>
+              <h3>Updates & Notifications</h3>
+              <p>جميع التنبيهات المهمة هنا</p>
+            </div>
+            <span class="mini-badge">Live</span>
+          </div>
+
+          <div class="updates-list" id="studentUpdatesList"></div>
+        </article>
+      </aside>
+    </div>
+  </main>
+
+  <div class="notification-center">
+    <button class="notification-fab" id="studentNotificationFab" type="button" aria-label="فتح مركز الإشعارات">
+      <span>🔔</span>
+      <strong id="studentNotificationCount">0</strong>
+    </button>
+    <div class="notification-panel hidden" id="studentNotificationPanel">
+      <div class="notification-panel-head">
+        <strong>Notification Center</strong>
+        <button class="notification-clear" id="studentMarkAllRead" type="button">Mark all read</button>
+      </div>
+      <div class="notification-feed" id="studentNotificationFeed"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="studentDashboardToast"></div>
+
+  <script src="student-dashboard.js"></script>
+</body>
+</html>
